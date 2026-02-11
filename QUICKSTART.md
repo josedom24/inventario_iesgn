@@ -21,18 +21,12 @@ pip install -r requirements.txt
 python3 app.py
 ```
 
-El servidor estará disponible en: `http://localhost:5000`
+El servidor estará disponible en: `http://172.22.0.3:5000`
 
 ### 2️⃣ Ejecutar el script desde otra máquina
 
 ```bash
-curl http://localhost:5000/get_script | bash
-```
-
-O con URL personalizada:
-
-```bash
-curl http://192.168.1.100:5000/get_script | bash
+curl http://172.22.0.3:5000/get_script | bash
 ```
 
 ### 3️⃣ Ver los datos guardados

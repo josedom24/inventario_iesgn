@@ -43,7 +43,7 @@ Sistema para recopilar datos de hardware de equipos remotos mediante un script b
    python3 app.py
    ```
 
-   El servidor se ejecutará en `http://localhost:5000` por defecto.
+   El servidor se ejecutará en `http://172.22.0.3:5000` por defecto.
 
 ## Uso
 
@@ -56,8 +56,8 @@ curl http://tu-servidor:5000/get_script | bash
 ```
 
 Reemplazar `tu-servidor` con:
-- `localhost` si es en la misma máquina
-- IP del servidor (ej: `192.168.1.100`)
+- `172.22.0.3` si es en la misma máquina
+- IP del servidor (ej: `172.22.0.3`)
 - Dominio del servidor
 
 ### Opción 2: Descargar y ejecutar
@@ -96,7 +96,7 @@ SERVER_URL=http://tu-servidor:8000 bash <(curl http://tu-servidor:8000/get_scrip
 Devuelve el script bash para ejecutar
 
 ```bash
-curl http://localhost:5000/get_script
+curl http://172.22.0.3:5000/get_script
 ```
 
 ### POST /save_inventory
@@ -111,21 +111,21 @@ curl -X POST \
     "ram_gib": 32,
     "discos": "sda:500G"
   }' \
-  http://localhost:5000/save_inventory
+  http://172.22.0.3:5000/save_inventory
 ```
 
 ### GET /health
 Comprueba que el servidor está activo
 
 ```bash
-curl http://localhost:5000/health
+curl http://172.22.0.3:5000/health
 ```
 
 ### GET /
 Página con instrucciones
 
 ```bash
-curl http://localhost:5000/
+curl http://172.22.0.3:5000/
 ```
 
 ## Archivo CSV de salida
@@ -152,7 +152,7 @@ PC002,"AMD Ryzen 7 3700X",16,"sda:250G"
 
 ### Error: conexión rechazada
 - Asegurar que Flask está escuchando en `0.0.0.0:5000`
-- Si ejecutas Flask localmente, cambiar `localhost` en la URL
+- Si ejecutas Flask localmente, cambiar `172.22.0.3` en la URL
 
 ### Error al leer /proc
 - Asegurar que el script se ejecuta en Linux

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script de prueba para simular el envío de datos sin hardware real
 
-SERVER_URL="${SERVER_URL:-http://localhost:5000}"
+SERVER_URL="${SERVER_URL:-http://172.22.0.3:5000}"
 INVENTORY_ENDPOINT="$SERVER_URL/save_inventory"
 
 # Ejemplos de datos para pruebas

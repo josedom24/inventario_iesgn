@@ -125,7 +125,7 @@ def index():
         </ul>
         
         <h2>Uso:</h2>
-        <pre>curl http://localhost:5000/get_script | bash</pre>
+        <pre>curl http://172.22.0.3:5000/get_script | bash</pre>
         
         <h2>Datos guardados:</h2>
         <p>Archivo: <code>""" + INVENTARIO_FILE + """</code></p>
