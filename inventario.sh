@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # URL del servidor Flask (cambiar si es necesario)
-SERVER_URL="${SERVER_URL:-http://localhost:5000}"
+SERVER_URL="${SERVER_URL:-http://172.22.0.3:5000}"
 INVENTORY_ENDPOINT="$SERVER_URL/save_inventory"
 
 # Solicitar código del equipo
