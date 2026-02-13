@@ -29,11 +29,10 @@ def crear_celda_hardware(registro):
     discos_short = discos[:50] if len(discos) > 50 else discos
     
     html = f"""
-    <font size="11" face="Helvetica-Bold">{codigo}</font><br/>
-    <br/>
-    <font size="8"><b>CPU:</b> {cpu_short}</font><br/>
-    <font size="8"><b>RAM:</b> {ram} GiB</font><br/>
-    <font size="8"><b>Discos:</b> {discos_short}</font>
+    <font size="14" face="Helvetica-Bold">{codigo}</font><br/><br/><br/>
+    <font size="10"><b>CPU:</b> {cpu_short}</font><br/><br/>
+    <font size="10"><b>RAM:</b> {ram} GiB</font><br/><br/>
+    <font size="10"><b>Discos:</b> {discos_short}</font>
     """
     
     styles = ParagraphStyle(
